@@ -30,7 +30,7 @@ The **GlacierMIP4 protocol** defines the experimental design for GlacierMIP4 and
       - [Regional files with Individual-glacier output for each RGI region (optional)](#regional-files-with-individual-glacier-output-for-each-rgi-region-optional)
   - [5. Authorship on GLACIERMIP4 publications](#5-authorship-on-glaciermip4-publications)
   - [6. Contacts and how to participate](#6-contacts-and-how-to-participate)
-  - [Protocol authors / contributors](#protocol-authors--contributors)
+  - [Contributors](#contributors)
 
 ---
 
@@ -69,16 +69,34 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 
 ### Inventory data
 
-- **Glacier outlines and area**: RGI7.
-- **Ice thickness**: Datasets are still under discussion but include the one by Maffezzoli et al. (https://arxiv.org/abs/2512.11685). Alternatively, the thicknesses may also be provided in raster format based on reconstructions from OGGM and GloGEM. Initial ice volumes will be supplied both at the individual-glacier level and aggregated by RGI region. Modelers may either adopt these provided initial volumes directly or generate their own year-2000 volumes using model-specific spin-up procedures. In the latter case, the resulting regional ice volumes must agree with the reference values in **Table 1** within (**TBD ±10%**).
-
-| RGI01 | RGI02 | RGI03 | RGI04 | RGI05 | RGI06 | RGI07 | RGI08 | RGI09 | RGI10 | RGI11 | RGI12 | RGI13 | RGI14 | RGI15 | RGI16 | RGI17 | RGI18 | RGI19 |
-|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|
-| TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-
+- **Glacier outlines and area**: [RGI7](https://www.glims.org/rgi_user_guide/welcome.html).
+- **Ice thickness**: Datasets are still under discussion but include the one by [Maffezzoli et al.](https://arxiv.org/abs/2512.11685). Alternatively, the thicknesses may also be provided in raster format based on reconstructions from OGGM and GloGEM. Initial ice volumes will be supplied both at the individual-glacier level and aggregated by RGI region. Modelers may either adopt these provided initial volumes directly or generate their own year-2000 volumes using model-specific spin-up procedures. In the latter case, the resulting regional ice volumes must agree with the reference values in **Table 1** within (⚠️**TBD ±10%**⚠️).
 
 **Table 1.** Reference values for initial ice volume for RGI regions (year 2000). Units: km³.
 
+| Region | Full name | Area (km²) | Volume |
+|:-------|:----------------------------------|------------:|:------:|
+| 01 | Alaska | 86708 | **TBD** |
+| 02 | Western Canada and USA | 14521 | **TBD** |
+| 03 | Arctic Canada North | 105370 | **TBD** |
+| 04 | Arctic Canada South | 40538 | **TBD** |
+| 05 | Greenland Periphery | 90482 | **TBD** |
+| 06 | Iceland | 11060 | **TBD** |
+| 07 | Svalbard and Jan Mayen | 33959 | **TBD** |
+| 08 | Scandinavia | 2948 | **TBD** |
+| 09 | Russian Arctic | 51595 | **TBD** |
+| 10 | North Asia | 2643 | **TBD** |
+| 11 | Central Europe | 2124 | **TBD** |
+| 12 | Caucasus and Middle East | 1407 | **TBD** |
+| 13 | Central Asia | 50344 | **TBD** |
+| 14 | South Asia West | 33075 | **TBD** |
+| 15 | South Asia East | 16049 | **TBD** |
+| 16 | Low Latitudes | 1929 | **TBD** |
+| 17 | Southern Andes | 27674 | **TBD** |
+| 18 | New Zealand | 886 | **TBD** |
+| 19 | Subantarctic and Antarctic Islands | 133432 | **TBD** |
+| 20 | Antarctic Mainland | 0 | **TBD** |
+| Global |  | 706744 | **TBD** |
 
 ### Climate data for hindcast and projections
 
@@ -86,6 +104,8 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 - **Projections**: All models must force their models with bias-corrected GCM data from 8 GCMs (**Table 2**) and four SSP scenarios (SSP1-2.6, SSP5-3.4OS, SSP5-8.5 ⚠️**TBD**⚠️).
 
 The scenarios were selected to align with the protocols used by [ISMIP](https://www.ismip.org/). We include the two GCMs used by ISMIP but add additional GCMs based on previous work. We will **bias-correct** monthly temperature and precipitation of all GCM projections to the ERA5 reanalysis, and the data will be made available to all participants. The bias-correction follows the method by ⚠️**TBD**⚠️. If you need additional variables or use a different time resolution you will need to prepare the data and bias-correct the GCM data yourself.
+
+**Table 2.** List of the selected GCMs following [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024). Values in parentheses are Equilibrium Climate Sensitivity (ECS), and stars (*) indicate models with simulation until 2300. IPSL-CM6A-LR is one of the "hot models" ([Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)).
 
 | Model | ECS | Until 2300 (*) | 
 |---|---:|:---:|
@@ -98,11 +118,10 @@ The scenarios were selected to align with the protocols used by [ISMIP](https://
 | MIROC6 | 2.6 |  |  
 | NorESM2-MM | 2.49 |  |  
 
-**Table 2.** List of the selected GCMs following [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024). Values in parentheses are Equilibrium Climate Sensitivity (ECS), and stars (*) indicate models with simulation until 2300. IPSL-CM6A-LR is one of the "hot models" ([Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)).
 
 ### Prescribed variables / constants
 
-Density conversion mass to volume in simulations: **900 kg m^-3**
+Density conversion mass to volume in simulations: **900 kg m⁻³**
 
 ### Model calibration and validation
 
@@ -133,12 +152,12 @@ For each model and each RGI region submit:
   - 1 NetCDF file with annual variables
   - 1 NetCDF file with monthly variables
 
-Participants must submit the required variables listed below for at least one complete RGI region. 
+Participants must submit the mandatory variables listed below for at least one complete RGI region. 
 
-Optionally, participants may also submit results in separate files for each individual glacier within a RGI region. In this case the mandatory variables must be included for every glacier.
+Optionally, participants may also submit additional files with results for each individual glacier within a RGI region. In this case the mandatory variables (see next section and **Tables 3 and 4**) must be included for every glacier.
 
 
-## Required variables
+## Mandatory variables
 
 ### Annual variables:
 - a) Glacier area
@@ -152,7 +171,7 @@ If not computed, NaN values (⚠️**TBD**⚠️) must be given. Variables (a-c)
 - **Accumulation, melt and refreezing over the evolving glacierized area** (sum over each month)
 - **Glacier runoff** (glacier melt - refreezing + liquid precipitation) over the evolving glacierized area (“moving-gauge” runoff)
 - **Precipitation over the initial glacierized area** (sum over each month
-- **Near-surface air temperature over the initial glacierized area** (mean)
+- **Near-surface air temperature over the initial glacierized area** (area-weighted mean)
 
 Variables (a) will be used to investigate inter-model differences in mass-balance components, while variables (c) and (d) will be used to examine differences in forcing after model-specific downscaling and corrections.
 
@@ -260,34 +279,20 @@ Note that advisors of any potential data contributors/co-authors or other group 
 
 ---
 
-## Contributors (protocol authors)
+## Contributors
 
-Protocol developed by (alphabetical order):
-
-- Johannes Brunner
-- Johannes Fürst
-- Regine Hock
-- Matthias Huss
-- Ben Marzeion
-- Fabien Maussion
-- David Rounce
-- Lilian Schuster
-- Larissa van der Laan
-- Lander van Tricht
-- Ruitang Yang
-- Yeliz Yilmaz
-- Harry Zekollari
+The protocol was developed by (alphabetical order): Johannes Brunner, Johannes Fürst, Regine Hock, Matthias Huss, Ben Marzeion, Fabien Maussion, David Rounce, Lilian Schuster, Larissa van der Laan, Lander van Tricht, Ruitang Yang, Yeliz Yilmaz, Harry Zekollari.
 
 ---
 
 ## To Be Added
 
-The following items will be added to the repository when finalized:
+The following items will be added to the protocol when finalized:
 
+- Reference list at the end of the document
 - Table 1 — Prescribed regional ice volumes for year 2000 (by RGI region)
 - Table 2 — Final list of GCMs to be used for projections
 - Tables 3–5 — Output variable tables with full variable definitions, units, cf conventions and cell methods
 - NetCDF templates and example notebooks (`netcdf_templates/` and `notebooks/`)
 ---
-
 
