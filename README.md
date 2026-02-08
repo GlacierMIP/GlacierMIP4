@@ -278,78 +278,39 @@ Note that advisors of any potential data contributors/co-authors or other group 
 
 ---
 
-### **Table 3**. Mandatory variables (annual output for entire RGI regions)
+### Table 3. Mandatory variables (annual output for entire RGI regions)
 
-| **Variable** | | **Short name** | **Long name** | **Unit** | **Data type** | **Cell method** | **Temporal res.** |
-|:----------------------------|:-:|:-------------|:----------------------------------------------|:--------------------------------|:------------|:-------------|:---------------|
-| **Area** | | `area` | Glacier area | m² | float32 | point | annual |
-| **Mass** | | `mass` | Glacier mass | kg | float32 | point | annual |
-| **Mass below sea level** | | `mass_bsl` | Glacier mass below sea level | kg | float32 | point | annual |
-| **Frontal ablation** | | `frontal_abl` | Total annual frontal ablation | kg | float32 | sum | annual |
-| **Time (nc-axis)** | | `time` | time | days since 1850-01-01 00:00:00.000000 | long | — | annual |
-| **ID (nc-axis)** | | `RGIId` | Randolph Glacier Inventory ID | — | String | — | — |
+| Variable | Short name | Long name | Unit | Data type | Cell method | Temporal res. | Notes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|---|---|---|---|---|---|---|:---|
+| **Area** | `area` | Glacier area | m² | float32 | point | annual | Glacier area at the start of the year. |
+| **Mass** | `mass` | Glacier mass | kg | float32 | point | annual | Total glacier mass at start of the year. |
+| **Mass below sea level** | `mass_bsl` | Glacier mass below sea level | kg | float32 | point | annual | <details><summary>*Click to expand*</summary> Glacier mass below sea level of tidewater glaciers at start of the year. Needed for conversion to sea-level rise.</details> |
+| **Frontal ablation** | `frontal_abl` | Total annual frontal ablation | kg | float32 | sum | annual | <details><summary>*Click to expand*</summary>Frontal ablation of marine- and lake-terminating glaciers (mass losses from calving, subaerial frontal melting, sublimation above the waterline and subaqueous frontal melting below the waterline) over the preceding year; positive values indicate mass loss. If not calculated put NaN. </details> |
+| **Time (nc-axis)** | `time` | time | days since 1850 | long | — | annual | Start of the year.|
+| **ID (nc-axis, optional)** | `RGIId` | Randolph Glacier Inventory ID | — | String | — | — | ID of glacier in the Randolph Glacier Inventory (RGI 7). Only for individual glacier submissions.|
 
-#### Additional information to Table 3:
+### Table 4. Mandatory variables (monthly output for entire RGI regions)
 
-| **Variable** | **Comment** | **Info** |
-|:--------------------------------------|:------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Area** | — | Glacier area at the start of the year |
-| **Mass** | — | Total glacier mass at start of the year |
-| **Mass below sea level** | Needed for conversion to sea-level rise | Glacier mass below sea level of tidewater glaciers at start of the year |
-| **Frontal ablation** | If not calculated put NaN | Frontal ablation of marine- and lake-terminating glaciers (mass losses from calving, subaerial frontal melting, sublimation above the waterline and subaqueous frontal melting below the waterline) over the preceding year; positive values indicate mass loss. |
-| **Time (nc-axis)** | — | Start of the year |
-| **ID (nc-axis)** | Only for individual glacier submissions | ID of glacier in the Randolph Glacier Inventory (RGI 7) |
+| Variable | Short name | Long name | Unit | Data type | Cell method | Temporal res. | Notes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|---|---|---|---|---|---|---|:---|
+| **Accumulation** | `acc` | Total accumulation | kg | float32 | sum | monthly | <details><summary>*Click to expand*</summary>Mass added to the glacier except for refreezing.</details> |
+| **Melt** | `melt` | Total glacier melt (snow, ice, firn) | kg | float32 | sum | monthly | <details><summary>*Click to expand*</summary>Mass removed from the glacier except for frontal ablation (e.g., melt, evaporation). Melt is reported as positive values.</details> |
+| **Refreezing** | `refreeze` | Total refreezing | kg | float32 | sum | monthly | <details><summary>*Click to expand*</summary>Total refreezing within the snowpack or glacier. If not calculated put NaN. </details> |
+| **Runoff** | `runoff_glac` | Glacier runoff from glacierized area | kg | float32 | sum | monthly | <details><summary>*Click to expand*</summary>Glacier runoff over the evolving glacierized area, defined as melt minus refreezing plus liquid precipitation. The values represent “moving-gauge” glacier runoff.</details> |
+| **Precipitation** | `precip` | Total precipitation over initial glacierized area | kg | float32 | sum | monthly | <details><summary>*Click to expand*</summary>Total precipitation over the initial (year 2000) glacierized area after possible downscaling of climate input data (e.g., applying precipitation correction factors and gradients). This represents the actual precipitation values used in the accumulation calculations, with spatial averages area-weighted based on elevation-dependent or grid-based simulations. The purpose is to evaluate in how far model differences result from different downscaled precipitation.</details> |
+| **Temperature** | `temp` | Near-surface air temperature over initial glacierized area | K | float32 | mean | monthly | <details><summary>*Click to expand*</summary>Mean near-surface (2 m) area-weighted air temperature over the initial glacierized area (year 2000) after possible downscaling of climate input data (e.g., application of bias-correction or lapse rate). This represents the actual temperature values used in the melt calculations and the separation of solid and liquid precipitation. Temperatures must be area-weighted for each spatial element (elevation band or grid cell) according to its area (year 2000). The purpose is to evaluate in how far model differences result from different downscaled air temperatures.</details> |
+| **Time (nc-axis)** | `time` | time | days since 1850 | long | — | monthly | Start of the month. |
+| **ID (nc-axis, optional)** | `RGIId` | Randolph Glacier Inventory ID | — | String | — | — | <details><summary>ID of glacier in the Randolph Glacier Inventory (RGI 7). Only for individual glacier submissions.|
 
+### Table 5. Output for individual glaciers (optional)
 
-### **Table 4**. Mandatory variables (monthly output for entire RGI regions)
-
-| **Variable** | | **Short name** | **Long name** | **Unit** | **Data type** | **Cell method** | **Temporal res.** |
-|:----------------------------|:-:|:-------------|:----------------------------------------------|:--------|:------------|:-------------|:---------------|
-| **Accumulation** | | `acc` | Total accumulation | kg | float32 | sum | monthly |
-| **Melt** | | `melt` | Total glacier melt (snow, ice, firn) | kg | float32 | sum | monthly |
-| **Refreezing** | | `refreeze` | Total refreezing | kg | float32 | sum | monthly |
-| **Runoff** | | `runoff_glac` | Glacier runoff from glacierized area | kg | float32 | sum | monthly |
-| **Precipitation** | | `precip` | Total precipitation over initial glacierized area | kg | float32 | sum | monthly |
-| **Temperature** | | `temp` | Near-surface air temperature over initial glacierized area | K | float32 | mean | monthly |
-| **Time (nc-axis)** | | `time` | time | days since 1850-01-01 00:00:00.000000 | long | — | monthly |
-| **ID (nc-axis)** | | `RGIId` | Randolph Glacier Inventory ID | — | String | — | — |
-
-### Additional information to Table 4:
-
-| **Variable** | **Comment** | **Info** |
-|:----------------------------|:------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Accumulation** | — | Mass added to the glacier except for refreezing |
-| **Melt** | Melt is reported as positive values. | Mass removed from the glacier except for frontal ablation (e.g., melt, evaporation) |
-| **Refreezing** | If not calculated put NaN | Total refreezing within the snowpack or glacier. |
-| **Runoff** | — | Glacier runoff over the evolving glacierized area, defined as melt minus refreezing plus liquid precipitation. The values represent “moving-gauge” glacier runoff. |
-| **Precipitation** | The purpose is to evaluate in how far model differences result from different downscaled precipitation. | Total precipitation over the initial (year 2000) glacierized area after possible downscaling of climate input data (e.g., applying precipitation correction factors and gradients). This represents the actual precipitation values used in the accumulation calculations, with spatial averages area-weighted based on elevation-dependent or grid-based simulations. |
-| **Temperature** | The purpose is to evaluate in how far model differences result from different downscaled air temperatures. | Mean near-surface (2 m) area-weighted air temperature over the initial glacierized area (year 2000) after possible downscaling of climate input data (e.g., application of bias-correction or lapse rate). This represents the actual temperature values used in the melt calculations and the separation of solid and liquid precipitation. Note, that temperatures must be area-weighted: for each spatial element (elevation band or grid cell), use the temperature weighted by that element’s area (year 2000). |
-| **Time (nc-axis)** | — | Start of the month |
-| **ID (nc-axis)** | Only for individual glacier submissions | ID of glacier in the Randolph Glacier Inventory (RGI 7) |
-
-### **Table 5**. Output for individual glaciers (optional)
-Modelers may also submit data for all individual RGI glaciers of a region. In this case all variables of in Tables 3 and 4 must be included while the additional variables in this table are optional.
-
-| **Variable** | | **Short name** | **Long name** | **Unit** | **Data type** | **Cell method** | **Temporal res.** |
-|:----------------------------|:-:|:-------------|:----------------------------------------------|:----------------|:------------|:-------------|:---------------|
-| **Basin runoff** | | `runoff_basin` | Runoff from the initial glacierized area | kg | float32 | sum | monthly |
-| **Equilibrium line altitude** | | `ELA` | Altitude of the annual equilibrium line | m above sea level | float32 | maximum | annual |
-| **Transient equilibrium line altitude** | | `snowline` | Altitude of the monthly equilibrium line | m above sea level | float32 | maximum | monthly |
-| **Accumulation Area Ratio** | | `AAR` | Annual Accumulation Area Ratio | — | float32 | maximum | annual |
-| **ID (nc-axis)** | | `RGIId` | Randolph Glacier Inventory ID | — | String | — | — |
-
-### Additional information to Table 5:
-
-| **Variable** | **Comment** |
-|:----------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Basin runoff** | Glacier runoff, defined as melt minus refreezing plus liquid precipitation over the initial glacier area. The values represent “fixed-gauge” glacier runoff. Note: this refers to the constant initial glacier area in year 2000 and includes rain and melt from unglacierized areas once the glacier has retreated. This variable may allow coupling the output to other large-scale hydrological models. |
-| **Equilibrium line altitude** | Elevation of the annual equilibrium line, defined as the highest elevation over the course of the calendar year where the climatic mass balance is zero as derived from the mass-balance profile, i.e., the elevation where the profile intersects zero climatic mass balance. |
-| **Transient equilibrium line altitude** | Elevation of the monthly equilibrium line, defined as the highest elevation over the course of a month where the climatic mass balance is zero as derived from the mass-balance profile, i.e., the elevation where the profile intersects zero climatic mass balance. In case of sub-monthly model resolution, it is the maximum value during the month. |
-| **Accumulation Area Ratio** | Minimum ratio of accumulation area and total glacier area over the course of a year. The accumulation (ablation) area is the area where the annual mass balance is positive (negative). |
-| **ID (nc-axis)** | ID of glacier in the Randolph Glacier Inventory (RGI 7) |
-
-
----
+| Variable | Short name | Long name | Unit | Data type | Cell method | Temporal res. | Notes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|---|---|---|---|---|---|---|:---|
+| **Basin runoff** | `runoff_basin` | Runoff from the initial glacierized area | kg | float32 | sum | monthly | <details><summary>*Click to expand*</summary>Glacier runoff, defined as melt minus refreezing plus liquid precipitation over the initial glacier area. This refers to the constant initial glacier area in year 2000 and includes rain and melt from unglacierized areas once the glacier has retreated. May allow coupling the output to other large-scale hydrological models.</details> |
+| **Equilibrium line altitude** | `ELA` | Altitude of the annual equilibrium line | m above sea level | float32 | maximum | annual | <details><summary>*Click to expand*</summary>Elevation of the annual equilibrium line, defined as the highest elevation over the course of the calendar year where the climatic mass balance is zero as derived from the mass-balance profile, i.e., the elevation where the profile intersects zero climatic mass balance.</details> |
+| **Transient equilibrium line altitude** | `snowline` | Altitude of the monthly equilibrium line | m above sea level | float32 | maximum | monthly | <details><summary>*Click to expand*</summary>Elevation of the monthly equilibrium line, defined as the highest elevation over the course of a month where the climatic mass balance is zero as derived from the mass-balance profile. If sub-monthly resolution, it is the maximum value during the month.</details> |
+| **Accumulation Area Ratio** | `AAR` | Annual Accumulation Area Ratio | — | float32 | maximum | annual | <details><summary>*Click to expand*</summary>Minimum ratio of accumulation area and total glacier area over the course of a year. The accumulation (ablation) area is where the annual mass balance is positive (negative).</details> |
+| **ID (nc-axis)** | `RGIId` | Randolph Glacier Inventory ID | — | String | — | — | ID of glacier in the Randolph Glacier Inventory (RGI 7).|
 
 ## Contributors
 
