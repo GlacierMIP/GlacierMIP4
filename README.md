@@ -97,21 +97,24 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 ### Climate data for hindcast and projections
 
 - **Hindcast**: To ensure consistency in the forcing data used across glacier models, all models must be run with ERA5 reanalysis fields and provide output for the calibration period 2000–2025 (note, the end date is still ⚠️**TBD**⚠️).
-- **Projections**: All models must force their models with bias-corrected CMIP6 GCM data from eight GCMs (**Table 2**) and five SSP scenarios (SSP1-2.6, SSP5-3.4OS, SSP5-3.70,  SSP5-8.5 and the overshoot scenario SSP5-3.4OS). Scenarios and GCMs were selected to align as much as possible with the protocols used by [ISMIP](https://www.ismip.org/). We include the two GCMs used by ISMIP and selected additional GCMs based on [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024) which cover a wide range of climate sensitivities.
+- **Projections**: All models must force their models with bias-corrected CMIP6 GCM data from eight GCMs (**Table 2**) and four SSP scenarios (SSP1-2.6, SSP3-7.0,  SSP5-8.5 and the overshoot scenario SSP5-3.4OS). Scenarios and GCMs were selected to align as much as possible with the protocols used by [ISMIP](https://www.ismip.org/). We include the two GCMs used by ISMIP and selected additional GCMs based on [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024) which cover a wide range of climate sensitivities.
 We will **bias-correct** monthly temperature and precipitation of all GCM projections to the ERA5 reanalysis, and the data will be made available to all participants. The bias-correction follows the method by ⚠️**TBD**⚠️. If you need additional variables or use a different time resolution you will need to prepare the data and bias-correct the GCM data yourself.
 
-**Table 2.** List of the selected GCMs following [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024). Values in parentheses are Equilibrium Climate Sensitivity (ECS), and stars (*) indicate models with simulation until 2300. IPSL-CM6A-LR is one of the "hot models" ([Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)).
+**Table 2.** List of the selected GCMs following [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024). Values in parentheses are Equilibrium Climate Sensitivity (ECS), and stars (*) indicate models with simulation until 2300. IPSL-CM6A-LR and CESM2-WACCM are among the "hot models" ([Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)).
 
-| Model | ECS | Until 2300 (*) | 
-|---|---:|:---:|
-| IPSL-CM6A-LR | 4.6 | * | 
-| ACCESS-ESM1-5 | 3.9 | * |  
-| BCC-CSM2-MR | 3.0 |  |  
-| CESM-WACCM | 4.68 | * |  
-| MRI-ESM2-0 | 3.2 | * |  
-| MPI-ESM1-2-0 | 3.0 |  |  
-| MIROC6 | 2.6 |  |  
-| NorESM2-MM | 2.49 |  |  
+| Model          | ECS150 | SSP1-2.6 | SSP3-7.0 | SSP5-8.5 | SSP5-3.4OS |
+|----------------|--------|----------|----------|----------|------------|
+| ACCESS-ESM1-5  | 3.88   | X        | X        | X        |            |
+| BCC-CSM2-MR    | 3.02   | X        | X        | X        |            |
+| CESM2-WACCM    | 4.68   | X        | X        | X*       | X*         |
+| IPSL-CM6A-LR   | 4.70   | X*       | X        | X*       | X*         |
+| MRI-ESM2-0     | 3.13   | X*       | X        | X*       | X*         |
+| MPI-ESM1-2-HR  | 2.98   | X        | X        | X        |            |
+| MIROC6         | 2.60   | X        | X        | X        | X          |
+| NorESM2-MM     | 2.49   | X        | X        | X        |            |
+
+- ECS150: Hausfather et al. (2022)  
+- `*` Until 2300  
 
 
 ### Prescribed variables / constants
