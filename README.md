@@ -228,7 +228,7 @@ In GlacierMIP4 all individual mass balance components are defined **positive**, 
 
 ---
 
-## 4.7. File format and naming conventions
+## 5. Output file format and naming conventions
 
 Separate files must be submitted for hindcast and the projection results, for annual and monthly variables and for each RGI region and climate scenario. All output must be provided as NetCDF files following GlacierMIP4 conventions.
 
@@ -269,22 +269,21 @@ We will provide file structures, metadata conventions, and examples in the Glaci
 
 ---
 
-## 5. How to submit to GlacierMIP4
+## 6. How to submit to GlacierMIP4
 ⚠️**TBD**⚠️
 
 ---
 By submitting to GlacierMIP4 you agree that your data may be visually displayed to other participants and the wider community (e.g. in plots during conferences) prior to publication. You also agree that your submitted data are made publicly available if included in GlacierMIP4 resulting publications. Some institutions demand internal institutional pre-approval of a paper submission to be listed as co-author. Please be aware that by submitting your data, you consent to its inclusion in the paper submission, even if you do not obtain the necessary pre-approval for being listed as co-author in time. This procedure is essential, as we cannot remove your projections shortly before the paper is submitted.
 
-<br><br><br>
 ---
 
-## 6. Contributors
+## 7. Contributors
 
 The protocol was developed by (alphabetical order): Johannes Brunner, Johannes Fürst, Regine Hock, Matthias Huss, Ben Marzeion, Fabien Maussion, David Rounce, Lilian Schuster, Larissa van der Laan, Lander van Tricht, Ruitang Yang, Yeliz Yilmaz, Harry Zekollari.
 
 ---
 
-## 7. Contacts
+## 8. Contacts
 
 - Regine Hock (regineho@uio.no)
 - Harry Zekollari (harry.zekollari@vub.be)
@@ -292,7 +291,7 @@ The protocol was developed by (alphabetical order): Johannes Brunner, Johannes F
 
 ---
 
-## 8. Authorship on GLACIERMIP4 publication
+## 9. Authorship on GLACIERMIP4 publication
 
 To become a co-author of the resulting publication you must fulfill the following three conditions (1-3): 
 
@@ -320,7 +319,7 @@ Note that advisors of any potential data contributors/co-authors or other group 
 
 ---
 
-## 9. References
+## 10. References
 - Hausfather, Z., Marvel, K., Schmidt, G.A., Nielsen-Gammon, J.W. and Zelinka, M., 2022. Climate simulations: recognize the ‘hot model’problem. Nature, 605(7908), pp.26-29.
 - RGI 7.0 Consortium, 2023. Randolph Glacier Inventory - A Dataset of Global Glacier Outlines, Version 7.0. Boulder, Colorado USA. NSIDC: National Snow and Ice Data Center. doi:10.5067/f6jmovy5navz. Online access: https://doi.org/10.5067/f6jmovy5navz
 - Snyder, A., Prime, N., Tebaldi, C. and Dorheim, K., 2024. Uncertainty-informed selection of CMIP6 Earth system model subsets for use in multisectoral and impact models. Earth System Dynamics, 15(5), pp.1301-1318.
