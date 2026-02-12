@@ -55,7 +55,7 @@ Participants should, if possible, submit data for all RGI regions but submission
 
 ### Model period
 
-- Hindcast / calibration period: **2000–2025** (**end date may be adjusted pending IPCC decisions**).
+- Hindcast / calibration period: **2000–2025** (end date may be adjusted pending IPCC decisions).
 - Projection period: **2026–2100** (or 2300 for some GCMs where specified).
 
 Glacier models may apply a dynamic spin-up and can therefore begin their simulations prior to the year 2000, but modelers should provide all mandatory output (see **Table 3**) from the year 2000 onwards and until the end of the projection period (year 2100 or 2300 depending on the climate model data). We selected 2000 as the start year for the hindcast since it is the RGI's target year, although individual outlines may refer to different years.
@@ -96,6 +96,8 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 
 - **Projections**: All models must force their models with bias-corrected CMIP6 GCM data from the eight GCMs listed in **Table 2** and four SSP scenarios (SSP1-2.6, SSP3-7.0, SSP5-8.5 and the overshoot scenario SSP5-3.4OS). Scenarios and GCMs were selected to align as much as possible with the protocols used by [ISMIP](https://www.ismip.org/). We include the two GCMs used by ISMIP (CESM2-WACCM and one yet TBD) and selected additional GCMs based on [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024) which cover a wide range of climate sensitivities. We also added the NorESM2-MM which, despite structural similarity, displays significantly lower equilibrium climate sensitivity than CESM2-WACCM (Table 2).
 
+We will **bias-correct** monthly temperature and precipitation of all GCM projections to the ERA5 reanalysis, and the data will be made available to all participants. The bias-correction follows the method by ⚠️**TBD**⚠️. If you need additional variables or use a different time resolution you will need to prepare the data and bias-correct the GCM data yourself.
+
 **Table 2.** List of the selected GCMs following [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024). Values in parentheses are Equilibrium Climate Sensitivity (ECS, [Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)), and stars (*) indicate models with simulation until 2300.
 
 | Model          | ECS150 | SSP1-2.6 | SSP3-7.0 | SSP5-8.5 | SSP5-3.4OS |
@@ -109,8 +111,6 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 | MIROC6         | 2.60   | X        | X        | X        | X          |
 | NorESM2-MM     | 2.49   | X        | X        | X        |            |
 
-
-We will **bias-correct** monthly temperature and precipitation of all GCM projections to the ERA5 reanalysis, and the data will be made available to all participants. The bias-correction follows the method by ⚠️**TBD**⚠️. If you need additional variables or use a different time resolution you will need to prepare the data and bias-correct the GCM data yourself.
 
 ### Prescribed variables / constants
 
