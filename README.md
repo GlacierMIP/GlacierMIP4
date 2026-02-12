@@ -33,15 +33,11 @@ The **GlacierMIP4 protocol** defines the experimental design for GlacierMIP4 and
 
 ## 1. Who can participate in GlacierMIP4?
 
-To participate in GlacierMIP4, you must contribute a unique dataset of global or regional-scale glacier projections. Projections must cover at least one full region of the Randolph Glacier Inventory (RGI) and be forced by the full set of prescribed climate scenarios. The projections must follow the GlacierMIP protocol.
+To participate in GlacierMIP4, you must contribute a unique dataset of global or regional-scale glacier projections. Projections must cover at least one full region of the Randolph Glacier Inventory [RGI7](https://www.glims.org/rgi_user_guide/welcome.html) and be forced by the full set of prescribed climate scenarios. The projections must follow the GlacierMIP protocol. Data submissions will not be included if they fail to meet basic quality standards (e.g. results are not plausible, unrealistic or incomplete) or the model is deemed not suitable for the exercise.
 
 Submissions utilizing the same model framework (e.g., OGGM, PyGEM, IGM) are welcome; however, they must exhibit significant differences from one another. This could include variations in model physics, calibration procedures, or other substantial aspects. Please reach out to us if you plan to submit projections using any of the openly available models (OGGM, PyGEM, IGM, GloGEM) but you are not part of the original developer group. Submissions from groups other than the developer group must be pre-approved by the GlacierMP core team to make sure they are sufficiently different from the projections from the developer group.
 
-Data submissions will not be included if they fail to meet basic quality standards (e.g. results are not plausible, unrealistic or incomplete) or the model is deemed not suitable for the exercise.
-
-By submitting to GlacierMIP4 you agree that your data may be visually displayed to other participants and the wider community (e.g. in plots during conferences) prior to publication. You also agree that your submitted data are made publicly available if included in GlacierMIP4 resulting publications. Some institutions demand internal institutional pre-approval of a paper submission to be listed as co-author. Please be aware that by submitting your data, you consent to its inclusion in the paper submission, even if you do not obtain the necessary pre-approval for being listed as co-author in time. This procedure is essential, as we cannot remove your projections shortly before the paper is submitted.
-
-If you would like to participate, please indicate your intention by filling in this [survey ⚠️**TBD**⚠️](#) which also prompts for details about your model.
+If you would like to participate, please fill in this [survey ⚠️**TBD**⚠️](#) which also prompts for details about your model.
 
 ---
 
@@ -60,9 +56,9 @@ Participants should, if possible, submit data for all RGI regions but submission
 ### Model period
 
 - Hindcast / calibration period: **2000–2025** (**end date may be adjusted pending IPCC decisions**).
-- Projection period: **2025–2100** (or 2300 for some GCMs where specified).
+- Projection period: **2026–2100** (or 2300 for some GCMs where specified).
 
-Glacier models may apply a dynamic spin-up and can therefore begin their simulations prior to the year 2000, but modelers should provide all mandatory output (see **Table 3**) from the year 2000 onwards and until the end of the projection period (year 2100 or 2300 depending on the climate model data).
+Glacier models may apply a dynamic spin-up and can therefore begin their simulations prior to the year 2000, but modelers should provide all mandatory output (see **Table 3**) from the year 2000 onwards and until the end of the projection period (year 2100 or 2300 depending on the climate model data). We selected 2000 as the start year for the hindcast since it is the RGI's target year, although individual outlines may refer to different years.
 
 ### Inventory data
 
@@ -97,10 +93,10 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 ### Climate data for hindcast and projections
 
 - **Hindcast**: To ensure consistency in the forcing data used across glacier models, all models must be run with ERA5 reanalysis fields and provide output for the calibration period 2000–2025 (note, the end date is still ⚠️**TBD**⚠️).
-- **Projections**: All models must force their models with bias-corrected CMIP6 GCM data from eight GCMs (**Table 2**) and four SSP scenarios (SSP1-2.6, SSP3-7.0,  SSP5-8.5 and the overshoot scenario SSP5-3.4OS). Scenarios and GCMs were selected to align as much as possible with the protocols used by [ISMIP](https://www.ismip.org/). We include the two GCMs used by ISMIP and selected additional GCMs based on [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024) which cover a wide range of climate sensitivities.
-We will **bias-correct** monthly temperature and precipitation of all GCM projections to the ERA5 reanalysis, and the data will be made available to all participants. The bias-correction follows the method by ⚠️**TBD**⚠️. If you need additional variables or use a different time resolution you will need to prepare the data and bias-correct the GCM data yourself.
 
-**Table 2.** List of the selected GCMs following [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024). Values in parentheses are Equilibrium Climate Sensitivity (ECS), and stars (*) indicate models with simulation until 2300. IPSL-CM6A-LR and CESM2-WACCM are among the "hot models" ([Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)).
+- **Projections**: All models must force their models with bias-corrected CMIP6 GCM data from the eight GCMs listed in **Table 2** and four SSP scenarios (SSP1-2.6, SSP3-7.0, SSP5-8.5 and the overshoot scenario SSP5-3.4OS). Scenarios and GCMs were selected to align as much as possible with the protocols used by [ISMIP](https://www.ismip.org/). We include the two GCMs used by ISMIP (CESM2-WACCM and one yet TBD) and selected additional GCMs based on [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024) which cover a wide range of climate sensitivities. We also added the NorESM2-MM which, despite structural similarity, displays significantly lower equilibrium climate sensitivity than CESM2-WACCM (Table 2).
+
+**Table 2.** List of the selected GCMs following [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024). Values in parentheses are Equilibrium Climate Sensitivity (ECS, [Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)), and stars (*) indicate models with simulation until 2300.
 
 | Model          | ECS150 | SSP1-2.6 | SSP3-7.0 | SSP5-8.5 | SSP5-3.4OS |
 |----------------|--------|----------|----------|----------|------------|
@@ -113,9 +109,8 @@ We will **bias-correct** monthly temperature and precipitation of all GCM projec
 | MIROC6         | 2.60   | X        | X        | X        | X          |
 | NorESM2-MM     | 2.49   | X        | X        | X        |            |
 
-- ECS150: Hausfather et al. (2022)  
-- `*` Until 2300  
 
+We will **bias-correct** monthly temperature and precipitation of all GCM projections to the ERA5 reanalysis, and the data will be made available to all participants. The bias-correction follows the method by ⚠️**TBD**⚠️. If you need additional variables or use a different time resolution you will need to prepare the data and bias-correct the GCM data yourself.
 
 ### Prescribed variables / constants
 
@@ -142,7 +137,7 @@ GlacierMIP4 adopts a fully standardized output structure following the cf [metad
 
 Some variables are only requested once per year, others once per month. Therefore, we request **two separate files per simulation**.
 
-For each model and each RGI region submit:
+For each model and each RGI region participants must submit:
 - **Hindcast** (2000–2025):
   - 1 NetCDF file with annual variables
   - 1 NetCDF file with monthly variables
@@ -157,7 +152,7 @@ Optionally, participants may also submit additional files with results for each 
 
 ## Mandatory output variables
 
-### Annual variables:
+### Annual variables (reported once per calendar year)
 - a) **Glacier area**
 - b) **Glacier mass**
 - c) **Glacier mass below sea level**
@@ -165,13 +160,14 @@ Optionally, participants may also submit additional files with results for each 
 
 If not computed, NaN values (⚠️**TBD**⚠️) must be given. Variables (a-c) are provided as state variables at the start of the year. Frontal ablation is given as a total over the preceding year as defined in variable time (see below).
 
-### Monthly variables:
-- **Accumulation, melt and refreezing over the evolving glacierized area** (sum over each month)
-- **Glacier runoff** (glacier melt - refreezing + liquid precipitation) over the evolving glacierized area (“moving-gauge” runoff)
-- **Precipitation over the initial glacierized area** (sum over each month)
-- **Near-surface air temperature over the initial glacierized area** (area-weighted mean)
+### Monthly variables (reported once per month):
+- a) **Accumulation, melt and refreezing over the evolving glacierized area** (sum over each month)
+- b) **Glacier runoff** (glacier melt - refreezing + liquid precipitation) over the evolving glacierized area (“moving-gauge” runoff)
+- c) **Precipitation over the initial glacierized area** (sum over each month)
+- d) **Near-surface air temperature over the initial glacierized area** (area-weighted mean)
 
-Variables (a) will be used to investigate inter-model differences in mass-balance components, while variables (c) and (d) will be used to examine differences in forcing after model-specific downscaling and corrections.
+Monthly variables (a) and (b) will be used to investigate inter-model differences in mass-balance components, while variables (c) and (d) will be used to examine differences in forcing after model-specific downscaling and corrections.
+The full variable list for annual and monthly data with definitions and metadata is given in **Tables 3 and 4**.
 
 ---
 
@@ -182,9 +178,8 @@ Variables (a) will be used to investigate inter-model differences in mass-balanc
 **RGI-Id** (of RGI glacier).
 
 ---
-The full variable list for annual and monthly data with definitions and metadata is given in **Tables 3 and 4**.
 
-### Table 3. Mandatory variables (annual output for entire RGI regions)
+### Table 3. Mandatory annual variables for each RGI region
 
 | <sub>Variable</sub> | <sub>Short name</sub> | <sub>Long name</sub> | <sub>Unit</sub> | <sub>Data type</sub> | <sub>Cell method</sub> | <sub>Temporal res.</sub> | <sub>Notes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub> |
 |---|---|---|---|---|---|---|:---|
@@ -195,7 +190,7 @@ The full variable list for annual and monthly data with definitions and metadata
 | <sub>**Time (nc-axis)**</sub> | <sub>`time`</sub> | <sub>time</sub> | <sub>days since 1850</sub> | <sub>long</sub> | <sub>—</sub> | <sub>annual</sub> | <sub>Start of the year.</sub> |
 | <sub>**ID (nc-axis, optional)**</sub> | <sub>`RGIId`</sub> | <sub>Randolph Glacier Inventory ID</sub> | <sub>—</sub> | <sub>String</sub> | <sub>—</sub> | <sub>—</sub> | <sub>ID of glacier in the Randolph Glacier Inventory (RGI 7). Only for individual glacier submissions.</sub> |
 
-### Table 4. Mandatory variables (monthly output for entire RGI regions)
+### Table 4. Mandatory monthly variables for each RGI region
 
 | <sub>Variable</sub> | <sub>Short name</sub> | <sub>Long name</sub> | <sub>Unit</sub> | <sub>Data type</sub> | <sub>Cell method</sub> | <sub>Temporal res.</sub> | <sub>Notes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub> |
 |---|---|---|---|---|---|---|:---|
@@ -211,10 +206,9 @@ The full variable list for annual and monthly data with definitions and metadata
 
 ---
 
-### Optional variables (only for submissions with individual glacier output)
+### Additional optional variables (only for submissions with individual glacier output)
 
-To allow further analyses of the optional submissions with individual glacier output, we encourage participants to provide data in addition to the mandatory variables listed above. 
-See **Table 5** for more details. 
+To allow further analyses of the optional submissions of individual glacier output, we encourage participants to provide the data listed in **Table 5** in addition to the mandatory variables listed in **Tables 3 and 4**. 
 
 ### Table 5. Output for individual glaciers (optional)
 
@@ -277,7 +271,7 @@ We will provide file structures, metadata conventions, and examples in the Glaci
 ⚠️**TBD**⚠️
 
 ---
----
+By submitting to GlacierMIP4 you agree that your data may be visually displayed to other participants and the wider community (e.g. in plots during conferences) prior to publication. You also agree that your submitted data are made publicly available if included in GlacierMIP4 resulting publications. Some institutions demand internal institutional pre-approval of a paper submission to be listed as co-author. Please be aware that by submitting your data, you consent to its inclusion in the paper submission, even if you do not obtain the necessary pre-approval for being listed as co-author in time. This procedure is essential, as we cannot remove your projections shortly before the paper is submitted.
 
 <br><br><br>
 ---
@@ -296,7 +290,7 @@ The protocol was developed by (alphabetical order): Johannes Brunner, Johannes F
 
 ---
 
-## Authorship on GLACIERMIP4 publications
+## Authorship on GLACIERMIP4 publication
 
 To become a co-author of the resulting publication you must fulfill the following three conditions (1-3): 
 
@@ -324,11 +318,15 @@ Note that advisors of any potential data contributors/co-authors or other group 
 
 ---
 
+## References
+Hausfather, Z., Marvel, K., Schmidt, G.A., Nielsen-Gammon, J.W. and Zelinka, M., 2022. Climate simulations: recognize the ‘hot model’problem. Nature, 605(7908), pp.26-29.
+RGI 7.0 Consortium, 2023. Randolph Glacier Inventory - A Dataset of Global Glacier Outlines, Version 7.0. Boulder, Colorado USA. NSIDC: National Snow and Ice Data Center. doi:10.5067/f6jmovy5navz. Online access: https://doi.org/10.5067/f6jmovy5navz
+Snyder, A., Prime, N., Tebaldi, C. and Dorheim, K., 2024. Uncertainty-informed selection of CMIP6 Earth system model subsets for use in multisectoral and impact models. Earth System Dynamics, 15(5), pp.1301-1318.
+
 ## To Be Added
 
 The following items will be added to the protocol when finalized:
 
-- Reference list at the end of the document
 - Table 1 — Prescribed regional ice volumes for year 2000 (by RGI region)
-- Table 2 — Final list of GCMs to be used for projections
+- Table 2 — Decide on final list of GCMs for projections
 - NetCDF templates and example notebooks for standardized output (`netcdf_templates/` and `notebooks/`)
