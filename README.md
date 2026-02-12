@@ -11,23 +11,26 @@ The **GlacierMIP4 protocol** defines the experimental design for GlacierMIP4 and
   - [1. Who can participate in GlacierMIP4?](#1-who-can-participate-in-glaciermip4)
   - [2. Submission deadline](#2-submission-deadline)
   - [3. Standardization of simulations](#3-standardization-of-simulations)
-    - [Domain](#domain)
-    - [Model period](#model-period)
-    - [Inventory data](#inventory-data)
-    - [Climate data for hindcast and projections](#climate-data-for-hindcast-and-projections)
-    - [Prescribed variables](#prescribed-variables)
-    - [Model calibration and validation](#model-calibration-and-validation)
+    - [3.1. Domain](#3.1.-domain)
+    - [3.2. Model period](#model-period)
+    - [3.3. Inventory data](#inventory-data)
+    - [3.4. Climate data for hindcast and projections](#climate-data-for-hindcast-and-projections)
+    - [3.5. Prescribed variables](#prescribed-variables)
+    - [3.6. Model calibration and validation](#model-calibration-and-validation)
   - [4. Requested output](#4-requested-output)
-    - [Required variables](#required-variables)
+    - [4.1 Required variables](#required-variables)
       - [Annual variables](#annual-variables)
       - [Monthly variables](#monthly-variables)
-    - [Sign convention](#sign-convention)
-    - [File format and naming conventions](#file-format-and-naming-conventions)
+    - [4.2. Sign convention](#sign-convention)
+  - [5. File format and naming conventions](#file-format-and-naming-conventions)
       - [Regional files for each RGI region (mandatory)](#regional-files-for-each-rgi-region-mandatory)
       - [Regional files with Individual-glacier output for each RGI region (optional)](#regional-files-with-individual-glacier-output-for-each-rgi-region-optional)
-  - [Contributors](#contributors)
-  - [Contacts](#contacts)
-  - [Authorship on GLACIERMIP4 publications](#authorship-on-glaciermip4-publications)
+  - [6. How to submit to GlacierMIP4](#6-How-to-submit-to-GlacierMIP4)
+  - [7. Contributors](#contributors)
+  - [8. Contacts](#contacts)
+  - [9. Authorship on GLACIERMIP4 publications](#authorship-on-glaciermip4-publications)
+  - [10. References](#references)
+
 
 ---
 
@@ -98,9 +101,9 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 
 We will **bias-correct** monthly temperature and precipitation of all GCM projections to the ERA5 reanalysis, and the data will be made available to all participants. The bias-correction follows the method by ⚠️**TBD**⚠️. If you need additional variables or use a different time resolution you will need to prepare the data and bias-correct the GCM data yourself.
 
-**Table 2.** List of the selected GCMs following [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024). Values in parentheses are Equilibrium Climate Sensitivity (ECS, [Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)), and stars (*) indicate models with simulation until 2300.
+**Table 2.** List of the selected GCMs following [Snyder et al. (2024)](https://doi.org/10.5194/esd-15-1301-2024). Values in parentheses are Equilibrium Climate Sensitivity (ECS), and stars (*) indicate models with simulation until 2300.
 
-| Model          | ECS150 | SSP1-2.6 | SSP3-7.0 | SSP5-8.5 | SSP5-3.4OS |
+| Model          | ECS^ | SSP1-2.6 | SSP3-7.0 | SSP5-8.5 | SSP5-3.4OS |
 |----------------|--------|----------|----------|----------|------------|
 | ACCESS-ESM1-5  | 3.88   | X        | X        | X        |            |
 | BCC-CSM2-MR    | 3.02   | X        | X        | X        |            |
@@ -111,6 +114,7 @@ We will **bias-correct** monthly temperature and precipitation of all GCM projec
 | MIROC6         | 2.60   | X        | X        | X        | X          |
 | NorESM2-MM     | 2.49   | X        | X        | X        |            |
 
+^ECS150 values from Supplementary Data in [Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2).
 
 ### 3.5. Prescribed variables / constants
 
@@ -179,6 +183,10 @@ The full variable list for annual and monthly data with definitions and metadata
 ### 4.4. Domain definition (only for submissions with individual glacier output)
 **RGI-Id** (of RGI glacier).
 
+### 4.5. Sign convention
+
+In GlacierMIP4 all individual mass balance components are defined **positive**, including the mass loss terms melt and frontal ablation.
+
 ---
 
 ### Table 3. Mandatory annual variables for each RGI region
@@ -205,10 +213,9 @@ The full variable list for annual and monthly data with definitions and metadata
 | <sub>**Time (nc-axis)**</sub> | <sub>`time`</sub> | <sub>time</sub> | <sub>days since 1850</sub> | <sub>long</sub> | <sub>—</sub> | <sub>monthly</sub> | <sub>Start of the month.</sub> |
 | <sub>**ID (nc-axis, optional)**</sub> | <sub>`RGIId`</sub> | <sub>Randolph Glacier Inventory ID</sub> | <sub>—</sub> | <sub>String</sub> | <sub>—</sub> | <sub>—</sub> | <sub>ID of glacier in the Randolph Glacier Inventory (RGI 7). Only for individual glacier submissions.</sub> |
 
-
 ---
 
-### 4.5. Additional optional variables (only for submissions with individual glacier output)
+### 4.6. Additional optional variables (only for submissions with individual glacier output)
 
 To allow further analyses of the optional submissions of individual glacier output, we encourage participants to provide the data listed in **Table 5** in addition to the mandatory variables listed in **Tables 3 and 4**. 
 
@@ -221,10 +228,6 @@ To allow further analyses of the optional submissions of individual glacier outp
 | <sub>**Transient equilibrium line altitude**</sub> | <sub>`snowline`</sub> | <sub>Altitude of the monthly equilibrium line</sub> | <sub>m above sea level</sub> | <sub>float32</sub> | <sub>maximum</sub> | <sub>monthly</sub> | <details><summary><sub>*Click to expand*</sub></summary><sub>Elevation of the monthly equilibrium line, defined as the highest elevation over the course of a month, where the climatic mass balance is zero as derived from the mass-balance profile, i.e. the elevation where the profile intersects zero climatic mass balance. In case of sub-monthly model resolution, it is the maximum value during the month.</sub></details> |
 | <sub>**Accumulation Area Ratio**</sub> | <sub>`AAR`</sub> | <sub>Annual Accumulation Area Ratio</sub> | <sub>—</sub> | <sub>float32</sub> | <sub>maximum</sub> | <sub>annual</sub> | <details><summary><sub>*Click to expand*</sub></summary><sub>Minimum ratio of accumulation area and total glacier area over the course of a year. The accumulation (ablation) area is the area where the annual mass balance is positive (negative).</sub> |
 
-
-### 4.6. Sign convention
-
-In GlacierMIP4 all individual mass balance components are defined **positive**, including the mass loss terms melt and frontal ablation.
 
 ---
 
