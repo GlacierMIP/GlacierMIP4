@@ -49,18 +49,18 @@ The projections must be submitted in the prescribed format and received latest o
 
 ## 3. Standardization of simulations
 
-### Domain
+### 3.1. Domain
 
 Participants should, if possible, submit data for all RGI regions but submissions for at least one complete RGI region are also accepted.
 
-### Model period
+### 3.2. Model period
 
 - Hindcast / calibration period: **2000–2025** (end date may be adjusted pending IPCC decisions).
 - Projection period: **2026–2100** (or 2300 for some GCMs where specified).
 
 Glacier models may apply a dynamic spin-up and can therefore begin their simulations prior to the year 2000, but modelers should provide all mandatory output (see **Table 3**) from the year 2000 onwards and until the end of the projection period (year 2100 or 2300 depending on the climate model data). We selected 2000 as the start year for the hindcast since it is the RGI's target year, although individual outlines may refer to different years.
 
-### Inventory data
+### 3.3. Inventory data
 
 - **Glacier outlines and area**: [RGI7](https://www.glims.org/rgi_user_guide/welcome.html).
 - **Ice thickness**: Datasets are still under discussion but include the one by [Maffezzoli et al.](https://arxiv.org/abs/2512.11685). Alternatively, the thicknesses may also be provided in raster format based on reconstructions from OGGM and GloGEM. Initial ice volumes will be supplied both at the individual-glacier level and aggregated by RGI region. Modelers may either adopt these provided initial volumes directly or generate their own year-2000 volumes using model-specific spin-up procedures. In the latter case, the resulting regional ice volumes must agree with the reference values in **Table 1** within (⚠️**TBD ±10%**⚠️).
@@ -90,7 +90,7 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 | 19 | Subantarctic and Antarctic Islands | 133432 | **TBD** |
 | Global |  | 706744 | **TBD** |
 
-### Climate data for hindcast and projections
+### 3.4. Climate data for hindcast and projections
 
 - **Hindcast**: To ensure consistency in the forcing data used across glacier models, all models must be run with ERA5 reanalysis fields and provide output for the calibration period 2000–2025 (note, the end date is still ⚠️**TBD**⚠️).
 
@@ -112,11 +112,11 @@ We will **bias-correct** monthly temperature and precipitation of all GCM projec
 | NorESM2-MM     | 2.49   | X        | X        | X        |            |
 
 
-### Prescribed variables / constants
+### 3.5. Prescribed variables / constants
 
 Density conversion mass to volume in simulations: **900 kg m⁻³**
 
-### Model calibration and validation
+### 3.6. Model calibration and validation
 
 The glacier models are free to choose their own calibration and validation procedures and data, for example:
 
@@ -126,7 +126,7 @@ The glacier models are free to choose their own calibration and validation proce
 - **Snowline** data
 
 ---
-### Where to download the data:
+### 3.7. Where to download the data:
 ⚠️**TBD**⚠️
 
 ---
@@ -150,9 +150,9 @@ Participants must submit the mandatory variables listed below for at least one c
 Optionally, participants may also submit additional files with results for each individual glacier within a RGI region. In this case the mandatory variables (see next section and **Tables 3 and 4**) must be included for every glacier.
 
 
-## Mandatory output variables
+### 4.1. Mandatory output variables
 
-### Annual variables (reported once per calendar year)
+#### Annual variables (reported once per calendar year)
 - a) **Glacier area**
 - b) **Glacier mass**
 - c) **Glacier mass below sea level**
@@ -160,7 +160,7 @@ Optionally, participants may also submit additional files with results for each 
 
 If not computed, NaN values (⚠️**TBD**⚠️) must be given. Variables (a-c) are provided as state variables at the start of the year. Frontal ablation is given as a total over the preceding year as defined in variable time (see below).
 
-### Monthly variables (reported once per month):
+#### 4.2. Monthly variables (reported once per month):
 - a) **Accumulation, melt and refreezing over the evolving glacierized area** (sum over each month)
 - b) **Glacier runoff** (glacier melt - refreezing + liquid precipitation) over the evolving glacierized area (“moving-gauge” runoff)
 - c) **Precipitation over the initial glacierized area** (sum over each month)
@@ -171,10 +171,10 @@ The full variable list for annual and monthly data with definitions and metadata
 
 ---
 
-### Time definition (annual and monthly variables):
+### 4.3. Time definition (annual and monthly variables):
 **Time** (start of year/month, in “days since 1850-01-01”)
 
-### Domain definition (only for submissions with individual glacier output):
+### 4.4. Domain definition (only for submissions with individual glacier output):
 **RGI-Id** (of RGI glacier).
 
 ---
@@ -206,7 +206,7 @@ The full variable list for annual and monthly data with definitions and metadata
 
 ---
 
-### Additional optional variables (only for submissions with individual glacier output)
+### 4.5. Additional optional variables (only for submissions with individual glacier output)
 
 To allow further analyses of the optional submissions of individual glacier output, we encourage participants to provide the data listed in **Table 5** in addition to the mandatory variables listed in **Tables 3 and 4**. 
 
@@ -220,13 +220,13 @@ To allow further analyses of the optional submissions of individual glacier outp
 | <sub>**Accumulation Area Ratio**</sub> | <sub>`AAR`</sub> | <sub>Annual Accumulation Area Ratio</sub> | <sub>—</sub> | <sub>float32</sub> | <sub>maximum</sub> | <sub>annual</sub> | <details><summary><sub>*Click to expand*</sub></summary><sub>Minimum ratio of accumulation area and total glacier area over the course of a year. The accumulation (ablation) area is the area where the annual mass balance is positive (negative).</sub> |
 
 
-## Sign convention
+### 4.6. Sign convention
 
 In GlacierMIP4 all individual mass balance components are defined **positive**, including the mass loss terms melt and frontal ablation.
 
 ---
 
-## File format and naming conventions
+## 4.7. File format and naming conventions
 
 Separate files must be submitted for hindcast and the projection results, for annual and monthly variables and for each RGI region and climate scenario. All output must be provided as NetCDF files following GlacierMIP4 conventions.
 
@@ -267,7 +267,7 @@ We will provide file structures, metadata conventions, and examples in the Glaci
 
 ---
 
-### How to submit:
+## 5. How to submit:
 ⚠️**TBD**⚠️
 
 ---
@@ -276,13 +276,13 @@ By submitting to GlacierMIP4 you agree that your data may be visually displayed 
 <br><br><br>
 ---
 
-## Contributors
+## 6. Contributors
 
 The protocol was developed by (alphabetical order): Johannes Brunner, Johannes Fürst, Regine Hock, Matthias Huss, Ben Marzeion, Fabien Maussion, David Rounce, Lilian Schuster, Larissa van der Laan, Lander van Tricht, Ruitang Yang, Yeliz Yilmaz, Harry Zekollari.
 
 ---
 
-## Contacts
+## 7. Contacts
 
 - Regine Hock (regineho@uio.no)
 - Harry Zekollari (harry.zekollari@vub.be)
@@ -290,7 +290,7 @@ The protocol was developed by (alphabetical order): Johannes Brunner, Johannes F
 
 ---
 
-## Authorship on GLACIERMIP4 publication
+## 8. Authorship on GLACIERMIP4 publication
 
 To become a co-author of the resulting publication you must fulfill the following three conditions (1-3): 
 
@@ -318,10 +318,10 @@ Note that advisors of any potential data contributors/co-authors or other group 
 
 ---
 
-## References
-Hausfather, Z., Marvel, K., Schmidt, G.A., Nielsen-Gammon, J.W. and Zelinka, M., 2022. Climate simulations: recognize the ‘hot model’problem. Nature, 605(7908), pp.26-29.
-RGI 7.0 Consortium, 2023. Randolph Glacier Inventory - A Dataset of Global Glacier Outlines, Version 7.0. Boulder, Colorado USA. NSIDC: National Snow and Ice Data Center. doi:10.5067/f6jmovy5navz. Online access: https://doi.org/10.5067/f6jmovy5navz
-Snyder, A., Prime, N., Tebaldi, C. and Dorheim, K., 2024. Uncertainty-informed selection of CMIP6 Earth system model subsets for use in multisectoral and impact models. Earth System Dynamics, 15(5), pp.1301-1318.
+## 9. References
+- Hausfather, Z., Marvel, K., Schmidt, G.A., Nielsen-Gammon, J.W. and Zelinka, M., 2022. Climate simulations: recognize the ‘hot model’problem. Nature, 605(7908), pp.26-29.
+- RGI 7.0 Consortium, 2023. Randolph Glacier Inventory - A Dataset of Global Glacier Outlines, Version 7.0. Boulder, Colorado USA. NSIDC: National Snow and Ice Data Center. doi:10.5067/f6jmovy5navz. Online access: https://doi.org/10.5067/f6jmovy5navz
+- Snyder, A., Prime, N., Tebaldi, C. and Dorheim, K., 2024. Uncertainty-informed selection of CMIP6 Earth system model subsets for use in multisectoral and impact models. Earth System Dynamics, 15(5), pp.1301-1318.
 
 ## To Be Added
 
