@@ -126,12 +126,14 @@ The glacier models are free to choose their own calibration and validation proce
 - **Snowline** data
 
 ---
-### 3.7. Where to download the data:
+### 3.7. Where to download the data
 ⚠️**TBD**⚠️
 
 ---
 
 ## 4. Requested output
+
+### 4.1. Overview
 
 GlacierMIP4 adopts a fully standardized output structure following the cf [metadata conventions](https://cfconventions.org/). Time intervals are specified via boundary variables and [cell methods](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch07s03.html) attributes. All output must follow the variable definitions, units, sign convention, cf cell methods and metadata described below.
 
@@ -150,7 +152,7 @@ Participants must submit the mandatory variables listed below for at least one c
 Optionally, participants may also submit additional files with results for each individual glacier within a RGI region. In this case the mandatory variables (see next section and **Tables 3 and 4**) must be included for every glacier.
 
 
-### 4.1. Mandatory output variables
+### 4.2. Mandatory output variables
 
 #### Annual variables (reported once per calendar year)
 - a) **Glacier area**
@@ -160,7 +162,7 @@ Optionally, participants may also submit additional files with results for each 
 
 If not computed, NaN values (⚠️**TBD**⚠️) must be given. Variables (a-c) are provided as state variables at the start of the year. Frontal ablation is given as a total over the preceding year as defined in variable time (see below).
 
-#### 4.2. Monthly variables (reported once per month):
+#### Monthly variables (reported once per month)
 - a) **Accumulation, melt and refreezing over the evolving glacierized area** (sum over each month)
 - b) **Glacier runoff** (glacier melt - refreezing + liquid precipitation) over the evolving glacierized area (“moving-gauge” runoff)
 - c) **Precipitation over the initial glacierized area** (sum over each month)
@@ -171,10 +173,10 @@ The full variable list for annual and monthly data with definitions and metadata
 
 ---
 
-### 4.3. Time definition (annual and monthly variables):
+### 4.3. Time definition (annual and monthly variables)
 **Time** (start of year/month, in “days since 1850-01-01”)
 
-### 4.4. Domain definition (only for submissions with individual glacier output):
+### 4.4. Domain definition (only for submissions with individual glacier output)
 **RGI-Id** (of RGI glacier).
 
 ---
@@ -267,7 +269,7 @@ We will provide file structures, metadata conventions, and examples in the Glaci
 
 ---
 
-## 5. How to submit:
+## 5. How to submit to GlacierMIP4
 ⚠️**TBD**⚠️
 
 ---
