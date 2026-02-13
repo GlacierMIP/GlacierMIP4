@@ -41,7 +41,7 @@ To participate in GlacierMIP4, you must contribute a unique dataset of global or
 
 Submissions utilizing the same model framework (e.g., OGGM, PyGEM, IGM) are welcome; however, they must exhibit significant differences from one another. This could include variations in model physics, calibration procedures, or other substantial aspects. Please reach out to us if you plan to submit projections using any of the openly available models (OGGM, PyGEM, IGM, GloGEM) but you are not part of the original developer group. Submissions from groups other than the developer group must be pre-approved by the GlacierMP core team to make sure they are sufficiently different from the projections from the developer group.
 
-If you would like to participate, please fill in this [survey ](https://docs.google.com/forms/d/e/1FAIpQLSc4M972IpXnKy58dHXEitcFF3i49WiKXvI6nSNMRbCRzq5jxg/viewform?usp=sharing&ouid=118380720149598872487) which also prompts for details about your model.
+If intend to participate, please fill in this [survey ](https://docs.google.com/forms/d/e/1FAIpQLSc4M972IpXnKy58dHXEitcFF3i49WiKXvI6nSNMRbCRzq5jxg/viewform?usp=sharing&ouid=118380720149598872487) which also prompts for details about your model.
 
 ---
 
