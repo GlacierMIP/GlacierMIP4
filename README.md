@@ -11,25 +11,26 @@ The **GlacierMIP4 protocol** defines the experimental design for GlacierMIP4 and
   - [1. Who can participate in GlacierMIP4?](#1-who-can-participate-in-glaciermip4)
   - [2. Submission deadline](#2-submission-deadline)
   - [3. Standardization of simulations](#3-standardization-of-simulations)
-    - [3.1. Domain](#3.1.-domain)
-    - [3.2. Model period](#model-period)
-    - [3.3. Inventory data](#inventory-data)
-    - [3.4. Climate data for hindcast and projections](#climate-data-for-hindcast-and-projections)
-    - [3.5. Prescribed variables](#prescribed-variables)
-    - [3.6. Model calibration and validation](#model-calibration-and-validation)
+    - [3.1. Domain](#31-domain)
+    - [3.2. Model period](#32-model-period)
+    - [3.3. Inventory data](#33-inventory-data)
+    - [3.4. Climate data for hindcast and projections](#34-climate-data-for-hindcast-and-projections)
+    - [3.5. Prescribed variables](#35-prescribed-variables)
+    - [3.6. Model calibration and validation](#36-model-calibration-and-validation)
   - [4. Requested output](#4-requested-output)
-    - [4.1 Required variables](#required-variables)
-      - [Annual variables](#annual-variables)
-      - [Monthly variables](#monthly-variables)
-    - [4.2. Sign convention](#sign-convention)
-  - [5. File format and naming conventions](#file-format-and-naming-conventions)
-      - [Regional files for each RGI region (mandatory)](#regional-files-for-each-rgi-region-mandatory)
-      - [Regional files with Individual-glacier output for each RGI region (optional)](#regional-files-with-individual-glacier-output-for-each-rgi-region-optional)
-  - [6. How to submit to GlacierMIP4](#6-How-to-submit-to-GlacierMIP4)
-  - [7. Contributors](#contributors)
-  - [8. Contacts](#contacts)
-  - [9. Authorship on GLACIERMIP4 publications](#authorship-on-glaciermip4-publications)
-  - [10. References](#references)
+    - [4.1. Overview](#41-overview)
+    - [4.2. Mandatory output variables](#42-mandatory-output-variables)
+    - [4.3. Time definition](#43-time-definition-annual-and-monthly-variables)
+    - [4.4. Domain definition](#44-domain-definition-only-for-submissions-with-individual-glacier-output)
+    - [4.5. Sign convention](#45-sign-convention)
+  - [5. Output file format and naming conventions](#5-output-file-format-and-naming-conventions)
+    - [5.1. Regional files for each RGI region (mandatory)](#51-regional-files-for-each-rgi-region-mandatory)
+    - [5.2. Regional files with Individual-glacier output](#52-regional-files-with-individual-glacier-output-for-each-rgi-region-optional)
+  - [6. How to submit to GlacierMIP4](#6-how-to-submit-to-glaciermip4)
+  - [7. Contributors](#7-contributors)
+  - [8. Contacts](#8-contacts)
+  - [9. Authorship on GLACIERMIP4 publication](#9-authorship-on-glaciermip4-publication)
+  - [10. References](#10-references)
 
 
 ---
@@ -116,7 +117,7 @@ We will **bias-correct** monthly temperature and precipitation of all GCM projec
 
 ^ECS150 values from Supplementary Data in [Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2).
 
-### 3.5. Prescribed variables / constants
+### 3.5. Prescribed variables
 
 Density conversion mass to volume in simulations: **900 kg m⁻³**
 
@@ -239,7 +240,7 @@ Separate files must be submitted for hindcast and the projection results, for an
 
 ---
 
-### Regional files for each RGI region (mandatory):
+### 5.1. Regional files for each RGI region (mandatory):
 
 - One NetCDF file for the **annual** variables during the **hindcast** period 2000-2025  
   Naming convention: `[glaciermodel name]_rgi[number]_ERA5_annual.nc`  
@@ -259,7 +260,7 @@ Separate files must be submitted for hindcast and the projection results, for an
 
 ---
 
-### Regional files with Individual-glacier output for each RGI region (optional):
+### 5.2. Regional files with Individual-glacier output for each RGI region (optional):
 
 Same as above: One NetCDF file for each combination of glacier model, RGI region, GCM and SSP. These dimensions are identified by the file name analogously to the convention for the mandatory files. **The individual glaciers are identified by the RGIId-Dimension in each region´s file.** To distinguish between regional and individual files, **“indiv”** must be added to the [region] in the file name:
 
