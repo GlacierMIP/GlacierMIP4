@@ -67,9 +67,9 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 ### 3.3. Inventory data
 
 - **Glacier outlines and area**: [RGI7](https://www.glims.org/rgi_user_guide/welcome.html).
-- **Ice thickness**: Datasets are still under discussion but include the one by [Maffezzoli et al.](https://arxiv.org/abs/2512.11685). Alternatively, the thicknesses may also be provided in raster format based on reconstructions from OGGM and GloGEM. Initial ice volumes will be supplied both at the individual-glacier level and aggregated by RGI region. Modelers may either adopt these provided initial volumes directly or generate their own year-2000 volumes using model-specific spin-up procedures. In the latter case, the resulting regional ice volumes must agree with the reference values in **Table 1** within (⚠️**TBD ±10%**⚠️).
+- **Ice thickness**: Most likely we will use the data by [Maffezzoli et al.](https://arxiv.org/abs/2512.11685). Initial ice volumes will be supplied both at the individual-glacier and glacier complex level as well as aggregated by RGI region. Modelers may either adopt these provided initial volumes directly or generate their own year-2000 volumes using model-specific spin-up procedures. In the latter case, the resulting regional ice volumes must agree with the reference values in **Table 1** within (⚠️**TBD ±10%**⚠️).
 
-**Table 1.** Regional glacier area and volume. Areas are from RGI Consortium (2023) and volumes are from Maffezzoli et al (2026).
+**Table 1.** Regional glacier area and volume. Areas are from RGI Consortium (2023); volumes to be added later.
 
 | Region | Full name | Area (km²) | Volume (km³) |
 |:-------|:----------------------------------|------------:|:------:|
