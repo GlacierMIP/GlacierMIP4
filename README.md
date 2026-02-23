@@ -299,7 +299,7 @@ The protocol was developed by (alphabetical order): Johannes Brunner, Johannes F
 
 To become a co-author of the resulting publication you must fulfill the following three conditions (1-3): 
 
-1) You must have made a substantial contribution to the manuscript through at least one of the following activities:
+1) You must have made a substantial contribution to the manuscript through at least one of the following activities (a-f):
 
     a) data generation, i.e. you are a data provider. A data provider is defined as a person who performs all or part of the actual calculations of a model´s glacier projection data set that is used in the resulting publication. Others in the modeling research team may count as “data providers” if they have contributed to the projections in some other substantial capacity. For example, you have made significant intellectual contributions to the development of a new (yet unpublished) model or a variant of an existing model that is used here for the first time in the submitted projections, or you have created software used in this work, or contributed to data pre/post-processing or data quality control, or you have trained the person doing the calculations on how to use the model for this purpose.
 
