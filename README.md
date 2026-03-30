@@ -106,9 +106,9 @@ We will **bias-correct** monthly temperature and precipitation of all GCM projec
 
 | Model          | ECS^ | SSP1-2.6 | SSP3-7.0 | SSP5-8.5 | SSP5-3.4OS |
 |----------------|--------|----------|----------|----------|------------|
-| ACCESS-ESM1-5  | 3.88   | X        | X        | X        |            |
+| ACCESS-ESM1-5  | 3.88   | X*       | X        | X*       |            |
 | BCC-CSM2-MR    | 3.02   | X        | X        | X        |            |
-| CESM2-WACCM    | 4.68   | X        | X        | X*       | X*         |
+| CESM2-WACCM    | 4.68   | X*       | X        | X*       | X*         |
 | IPSL-CM6A-LR   | 4.70   | X*       | X        | X*       | X*         |
 | MRI-ESM2-0     | 3.13   | X*       | X        | X*       | X*         |
 | MPI-ESM1-2-HR  | 2.98   | X        | X        | X        |            |
