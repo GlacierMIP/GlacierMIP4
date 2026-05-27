@@ -125,7 +125,7 @@ Density conversion mass to volume in simulations: **900 kg m⁻³**
 
 The glacier models are free to choose their own calibration and validation procedures and data, for example:
 
-- Glacier-wide specific geodetic mass balances derived from an RGI7 updated version of **Hugonnet et al. (2021)** available [here](https://drive.google.com/drive/folders/1jXEQeYN8Swz-B2CYFxpFUlSWpgdvm7o0?usp=sharing).
+- Glacier-wide specific geodetic mass balances derived from an RGI7 updated version of **Hugonnet et al. (2021)** available [here](https://drive.google.com/drive/folders/1jXEQeYN8Swz-B2CYFxpFUlSWpgdvm7o0?usp=sharing). **This is unpublished data reserved for GlacierMIP4 use only.** For use outside GlacierMIP4, contact [rhugonnet@alaska.edu](rhugonnet@alaska.edu).
 - **WGMS** glacier-wide and point balances
 - **GRACE** data
 - **Snowline** data
