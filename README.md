@@ -266,7 +266,8 @@ Same as above: One NetCDF file for each combination of glacier model, RGI region
 ---
 
 ## 6. How to submit to GlacierMIP4
-⚠️**TBD**⚠️
+
+We are working on a centralized solution for submissions. For now, reach out to one of the [Contacts](#8-contacts) if you have questions regarding submission.
 
 ---
 By submitting to GlacierMIP4 you agree that your data may be visually displayed to other participants and the wider community (e.g. in plots during conferences) prior to publication. You also agree that your submitted data are made publicly available if included in GlacierMIP4 resulting publications. Some institutions demand internal institutional pre-approval of a paper submission to be listed as co-author. Please be aware that by submitting your data, you consent to its inclusion in the paper submission, even if you do not obtain the necessary pre-approval for being listed as co-author in time. This procedure is essential, as we cannot remove your projections shortly before the paper is submitted.
@@ -275,7 +276,7 @@ By submitting to GlacierMIP4 you agree that your data may be visually displayed 
 
 ## 7. Contributors
 
-The protocol was developed by (alphabetical order): Johannes Brunner, Johannes Fürst, Regine Hock, Matthias Huss, Ben Marzeion, Fabien Maussion, David Rounce, Lilian Schuster, Larissa van der Laan, Lander van Tricht, Ruitang Yang, Yeliz Yilmaz, Harry Zekollari.
+The protocol was developed by (alphabetical order): Johannes Brunner, Johannes Fürst, Regine Hock, Matthias Huss, Ben Marzeion, Fabien Maussion, David Rounce, Lilian Schuster, Larissa van der Laan, Lander van Tricht, Claire Wilson, Ruitang Yang, Yeliz Yilmaz, Harry Zekollari.
 
 ---
 
@@ -321,11 +322,3 @@ Note that advisors of any potential data contributors/co-authors or other group 
 - Snyder, A., Prime, N., Tebaldi, C. and Dorheim, K., 2024. Uncertainty-informed selection of CMIP6 Earth system model subsets for use in multisectoral and impact models. Earth System Dynamics, 15(5), pp.1301-1318.
 - Cannon, A. J., Sobie, S. R., & Murdock, T. Q. (2015). Bias Correction of GCM Precipitation by Quantile Mapping: How Well Do Methods Preserve Changes in Quantiles and Extremes? Journal of Climate, 28(17), 6938–6959. https://doi.org/10.1175/JCLI-D-14-00754.1
 - Lader, R., Walsh, J. E., Bhatt, U. S., & Bieniek, P. A. (2017). Projections of Twenty-First-Century Climate Extremes for Alaska via Dynamical Downscaling and Quantile Mapping. Journal of Applied Meteorology and Climatology, 56(9), 2393–2409. https://doi.org/10.1175/JAMC-D-16-0415.1
-
-## To Be Added
-
-The following items will be added to the protocol when finalized:
-
-- Table 1 — Prescribed regional ice volumes for year 2000 (by RGI region)
-- Table 2 — Decide on final list of GCMs for projections
-- NetCDF templates and example notebooks for standardized output (`netcdf_templates/` and `notebooks/`)
