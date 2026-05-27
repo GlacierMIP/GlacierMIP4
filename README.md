@@ -136,7 +136,7 @@ The glacier models are free to choose their own calibration and validation proce
 
 GlacierMIP4 adopts a fully standardized output structure following the cf [metadata conventions](https://cfconventions.org/). Time intervals are specified via boundary variables and [cell methods](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch07s03.html) attributes. All output must follow the variable definitions, units, sign convention, cf cell methods and metadata described below.
 
-Some variables are only requested once per year, others once per month. Therefore, we request **two separate files per simulation**.
+Some variables are only requested **once per year**, others **once per month**. Therefore, we request **two separate files per simulation**.
 
 For each model and each RGI region participants must submit:
 - **Hindcast** (2000–2025):
@@ -159,7 +159,7 @@ Optionally, participants may also submit additional files with results for each 
 - c) **Glacier mass below sea level**
 - d) **Frontal ablation**
 
-If not computed, NaN values (⚠️**TBD**⚠️) must be given. Variables (a-c) are provided as state variables at the start of the year. Frontal ablation is given as a total over the preceding year as defined in variable time (see below).
+If not computed, np.nan must be given. Variables (a-c) are provided as state variables at the start of the year. Frontal ablation is given as a total over the preceding year as defined in variable time (see below).
 
 #### Monthly variables (reported once per month)
 - a) **Accumulation, melt and refreezing over the evolving glacierized area** (sum over each month)
@@ -230,9 +230,11 @@ To allow further analyses of the optional submissions of individual glacier outp
 
 Separate files must be submitted for hindcast and the projection results, for annual and monthly variables and for each RGI region and climate scenario. All output must be provided as NetCDF files following GlacierMIP4 conventions.
 
-(Entries in brackets [ ] need to be adjusted for each case. Note that the RGI number must be preceded by 0 when less than 10)
+**We provide file structures, metadata conventions, examples and NetCDF-format notebooks in a separate [repository](https://github.com/joh-brunner/glaciermip4-nc)**. There, you can also find more information on the time axis and its intervals.
 
 ---
+
+(Entries in brackets [ ] need to be adjusted for each case. Note that the RGI number must be preceded by 0 when less than 10)
 
 ### 5.1. Regional files for each RGI region (mandatory):
 
@@ -260,10 +262,6 @@ Same as above: One NetCDF file for each combination of glacier model, RGI region
 
 - Example (annual variables): `OGGM_rgi01indiv_MRI-ESM_ssp126_annual.nc`  
 - Example (monthly variables): `OGGM_rgi01indiv_MRI-ESM_ssp126_monthly.nc`
-
----
-
-We will provide file structures, metadata conventions, and examples in the GlacierMIP4 `netcdf_templates` directory and NetCDF-format notebooks (work in progress - link to the Github will be provided soon). There, you will also find more information on the time axis and its intervals.
 
 ---
 
