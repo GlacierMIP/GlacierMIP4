@@ -130,12 +130,6 @@ The glacier models are free to choose their own calibration and validation proce
 - **GRACE** data
 - **Snowline** data
 
----
-### 3.7. Where to download the data
-⚠️**TBD**⚠️
-
----
-
 ## 4. Requested output
 
 ### 4.1. Overview
