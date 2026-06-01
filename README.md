@@ -67,32 +67,32 @@ Glacier models may apply a dynamic spin-up and can therefore begin their simulat
 ### 3.3. Inventory data
 
 - **Glacier outlines and area**: [RGI7](https://www.glims.org/rgi_user_guide/welcome.html).
-- **Ice thickness**: GlacierMIP4 uses the data by [Maffezzoli et al. (2026)](https://arxiv.org/abs/2512.11685), available [here](https://zenodo.org/records/17724512). Initial ice volumes are supplied both at the individual-glacier and glacier complex level as well as aggregated by RGI region. Modelers may either adopt these provided initial volumes directly or generate their own year-2000 volumes using model-specific spin-up procedures. In the latter case, the resulting **regional ice volumes** must agree with the reference values in **Table 1** within **±10%**.
+- **Ice thickness**: GlacierMIP4 uses the data by [Maffezzoli et al. (2026)](https://arxiv.org/abs/2512.11685). Initial ice volumes are supplied both at the individual-glacier ([here](https://zenodo.org/records/17724512)) and glacier complex level ([here](https://zenodo.org/records/20463551)) as well as aggregated by RGI region (**Table 1**). Modelers may either adopt these provided initial volumes directly or generate their own year-2000 volumes using model-specific spin-up procedures. In the latter case, the resulting **regional ice volumes** must agree with the reference values in **Table 1** within **±10%**.
 
 **Table 1.** Regional glacier area and volume. Areas are from RGI Consortium (2023). Volumes are from Maffezzoli et al. (2026).
 
-| Region | Full name | Area (km²) | Volume (km³) |
+| Region | Full name | Area (km²) | Volume (10³ km³) |
 |:-------|:----------------------------------|------------:|------------:|
-| 01 | Alaska | 86708 | 16916 |
-| 02 | Western Canada and USA | 14521 | 1544 |
-| 03 | Arctic Canada North | 105370 | 24357 |
-| 04 | Arctic Canada South | 40538 | 7109 |
-| 05 | Greenland Periphery | 90482 | 13453 |
-| 06 | Iceland | 11060 | 5937 |
-| 07 | Svalbard and Jan Mayen | 33959 | 7706 |
-| 08 | Scandinavia | 2948 | 353 |
-| 09 | Russian Arctic | 51595 | 12826 |
-| 10 | North Asia | 2643 | 192 |
-| 11 | Central Europe | 2124 | 110 |
-| 12 | Caucasus and Middle East | 1407 | 78 |
-| 13 | Central Asia | 50344 | 3824 |
-| 14 | South Asia West | 33075 | 3752 |
-| 15 | South Asia East | 16049 | 1033 |
-| 16 | Low Latitudes | 1929 | 90 |
-| 17 | Southern Andes | 27674 | 6785 |
-| 18 | New Zealand | 886 | 75 |
-| 19 | Subantarctic and Antarctic Islands | 133432 | 45689 |
-| Global |  | 706744 | 151829 |
+| 01 | Alaska | 86708 | 16.9 |
+| 02 | Western Canada and USA | 14521 | 1.5 |
+| 03 | Arctic Canada North | 105370 | 24.3 |
+| 04 | Arctic Canada South | 40538 | 7.1 |
+| 05 | Greenland Periphery | 90482 | 13.2 |
+| 06 | Iceland | 11060 | 4.6 |
+| 07 | Svalbard and Jan Mayen | 33959 | 6.7 |
+| 08 | Scandinavia | 2948 | 0.35 |
+| 09 | Russian Arctic | 51595 | 12.8 |
+| 10 | North Asia | 2643 | 0.19 |
+| 11 | Central Europe | 2124 | 0.11 |
+| 12 | Caucasus and Middle East | 1407 | 0.08 |
+| 13 | Central Asia | 50344 | 3.8 |
+| 14 | South Asia West | 33075 | 3.8 |
+| 15 | South Asia East | 16049 | 1.0 |
+| 16 | Low Latitudes | 1929 | 0.09 |
+| 17 | Southern Andes | 27674 | 6.7 |
+| 18 | New Zealand | 886 | 0.08 |
+| 19 | Subantarctic and Antarctic Islands | 133432 | 45.7 |
+| Global |  | 706744 | 149 |
 
 ### 3.4. Climate data for hindcast and projections
 
